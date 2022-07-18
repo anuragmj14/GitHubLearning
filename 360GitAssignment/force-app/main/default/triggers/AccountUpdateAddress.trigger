@@ -4,7 +4,12 @@ List<Account> acclist = new List<Account>();
   { 
     if(Acc.BillingAddress!= null)
     {
-        acc.ShippingAddress = acc.BillingAddress;
+        acc.ShippingStreet = acc.BillingStreet;
+        acc.ShippingCity = acc.billingCity;
+        acc.ShippingCountry = acc.ShippingCountry;
+        acc.ShippingState = acc.ShippingState;
+      
+
         acclist.add(acc);
     }
   }
