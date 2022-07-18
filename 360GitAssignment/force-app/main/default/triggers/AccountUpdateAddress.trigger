@@ -1,5 +1,5 @@
 trigger AccountUpdateAddress on Account (before insert) {
-List<Account> acclist = new List<Account>();
+
   for(Account acc : trigger.new)
   { 
     
@@ -7,11 +7,6 @@ List<Account> acclist = new List<Account>();
         acc.ShippingCity = acc.billingCity;
         acc.ShippingCountry = acc.ShippingCountry;
         acc.ShippingState = acc.ShippingState;
-      
-
-        acclist.add(acc);
-    
-  }
-  if(acclist.size()>0)
-  Database.insert(acclist);
+   }
+  
 }
